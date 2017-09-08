@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, WebVR! - A-Frame</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Mono" media="all" /><script>WebFont.load({google: {families: ["Roboto", "Roboto Mono"]}});</script>
+    
+  </head>
+   
+  <body>
+    
+    <a-scene data-brackets-id="89" class="fullscreen" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+    <a-assets data-brackets-id="90">
+        <img data-brackets-id="91" id="madera" src="Texturas/floor-wood-textures-backgrounds-2048x2048-wallpaper-647705.jpg">
+        <img data-brackets-id="92" id="cielo" src="Texturas/cielo.jpg">
+        <img data-brackets-id="92" id="grama" src="Texturas/seamless_tileable_grass_texture_by_mushin3d-d8jpn9c.jpg">
+        <img data-brackets-id="92" id="agua" src="Texturas/agua.jpg">
+        <img id="jasonL" src="Texturas/jbay.png">
+        <img id="money" src="Texturas/money.png">
+        
+        <audio id="check" src="sonido/Check%20mark%20sound%20effect.mp3" preload="auto"></audio>
+        
+        <a-asset-item id="casa" src="obj/LAKE+GARAGE/model.dae"></a-asset-item>
+        <a-asset-item id="jason" src="obj/AutoSave_Jason+project/model.dae"></a-asset-item>
+        <a-asset-item id="tree" src="obj/Pine+Tree/model.dae"></a-asset-item>
+        
+
+        <a-asset-item id="arm2" src="obj/armas/machette+fred/model.dae"></a-asset-item>
+        <a-asset-item id="arm3" src="obj/armas/SVK-21/model.dae"></a-asset-item>
+        
+    </a-assets>
+      
+        <a-curvedimage id="jason-logo" src="#jasonL" radius="5.7" theta-length="36" height="1" position="0 2.6 -1" opacity="0.5" rotation="0 200 0" material="" geometry="thetaLength:36">
+<a-animation attribute="rotation" from="0 10 0" to="0 200 0" delay="500" dur="1000"></a-animation>
+</a-curvedimage>
+     
+      <a-plane data-brackets-id="419" position="0.015 -0.95 -54.633" rotation="-90 0 0" width="100" height="10" src="#agua" color="#767" material="displacementTextureOffset:6.19 0;ambientOcclusionTextureRepeat:2.28 1;displacementScale:0.59;ambientOcclusionMapIntensity:2.02;ambientOcclusionTextureOffset:1.02 0;displacementBias:4;displacementTextureRepeat:-0.36 1;metalness:0.16;normalScale:1.94 1;normalTextureOffset:1.01 0;normalTextureRepeat:2.19 1;roughness:0.56" geometry="" scale="1.3400000000000007 10 1"></a-plane>
+        <a-plane data-brackets-id="422" position="0.015 0.001 21.407" rotation="-90.08 0 0" width="100" geometry="height:6.64" height="10" src="#grama" material="displacementTextureOffset:6.19 0;ambientOcclusionTextureRepeat:2.28 1;displacementScale:0.59;ambientOcclusionMapIntensity:2.02;ambientOcclusionTextureOffset:1.02 0;displacementBias:4;displacementTextureRepeat:-0.36 1;metalness:0.16;normalScale:1.94 1;normalTextureOffset:1.01 0;normalTextureRepeat:2.19 1;roughness:0.56" color="#767" scale="1.4200000000000002 11.54 1"></a-plane>
+     <a-sky data-brackets-id="103" color="#115" src="#cielo" position="0 2.528 0.753" light="color:#c5b3f4"></a-sky>
+          
+     <a-entity data-brackets-id="392" collada-model="#casa" position="-4.972 0.532 -1"></a-entity>
+            
+        <a-entity>
+        <a-entity data-brackets-id="930" collada-model="obj/armas/machette+fred/model.dae" position="5.378 2.871 -5.601" rotation="55 90 90" scale="1.3 1.3 1.3"></a-entity>
+        <a-animation    attribute="scale" begin="mouseenter" end="mouseleave" from="" to="2 2 2" from="" dur="2000" easing="linear" ></a-animation>
+            <a-curvedimage id="money" src="#money" radius="2" theta-length="36" height="0.5" position="0 0 0" opacity="0" rotation="-55 -90 -90" material="" geometry="thetaLength:36">
+                <a-animation    attribute="material.opacity" begin="mouseenter" end="mouseleave" from="0" to="0.50" from="" dur="2000" easing="linear" ></a-animation>
+            </a-curvedimage>
+            
+        </a-entity>
+        
+        
+        <a-entity sound="src: #check; on: click">
+        <a-entity  sound="src: #check; on: click" data-brackets-id="930" collada-model="obj/armas/machette+fred/model.dae" position="5.378 2.552 -5.601" rotation="55 90 90" scale="1.3 1.3 1.3">
+        <a-animation    attribute="scale" begin="mouseenter" end="mouseleave" from="" to="2 2 2" from="" dur="2000" easing="linear" ></a-animation>
+            <a-curvedimage id="money" src="#money" radius="2" theta-length="36" height="0.5" position="-0.697 0.979 0.796" opacity="0" rotation="55.28 134.22 90.36000000000001" geometry="thetaLength:36" scale="0.38 0.42000000000000004 1">
+                <a-animation attribute="material.opacity" begin="mouseenter" end="mouseleave" from="0" to="0.50" dur="2000" easing="linear"></a-animation>
+            </a-curvedimage>
+        </a-entity>
+        </a-entity>
+        <a-entity>
+        <a-entity data-brackets-id="930" collada-model="obj/armas/machette+fred/model.dae" position="5.378 2.172 -5.601" rotation="55 90 90" scale="1.3 1.3 1.3">
+        <a-animation    attribute="scale" begin="mouseenter" end="mouseleave" from="" to="2 2 2" from="" dur="2000" easing="linear" ></a-animation>
+            <a-curvedimage id="money" src="#money" radius="2" theta-length="36" height="0.5" position="-0.697 0.979 0.796" opacity="0" rotation="55.28 134.22 90.36000000000001" geometry="thetaLength:36" scale="0.38 0.42000000000000004 1">
+                <a-animation attribute="material.opacity" begin="mouseenter" end="mouseleave" from="0" to="0.50" dur="2000" easing="linear"></a-animation>
+            </a-curvedimage>
+        </a-entity>
+        </a-entity>
+        <a-entity>
+        <a-entity data-brackets-id="930" collada-model="obj/armas/machette+fred/model.dae" position="5.378 1.82 -5.601" rotation="55 90 90" scale="1.3 1.3 1.3"><a-animation    attribute="scale" begin="mouseenter" end="mouseleave" from="" to="2 2 2" from="" dur="2000" easing="linear" ></a-animation>
+            <a-curvedimage id="money" src="#money" radius="2" theta-length="36" height="0.5" position="-0.697 0.979 0.796" opacity="0" rotation="55.28 134.22 90.36000000000001" geometry="thetaLength:36" scale="0.38 0.42000000000000004 1">
+                <a-animation attribute="material.opacity" begin="mouseenter" end="mouseleave" from="0" to="0.50" dur="2000" easing="linear"></a-animation>
+            </a-curvedimage>
+        </a-entity>
+        </a-entity>
+        <a-entity>
+        <a-entity data-brackets-id="930" collada-model="obj/armas/machette+fred/model.dae" position="5.378 1.404 -5.601" rotation="55 90 90" scale="1.3 1.3 1.3">
+        <a-animation    attribute="scale" begin="mouseenter" end="mouseleave" from="" to="2 2 2" from="" dur="2000" easing="linear" ></a-animation>
+            <a-curvedimage id="money" src="#money" radius="2" theta-length="36" height="0.5" position="-0.697 0.979 0.796" opacity="0" rotation="55.28 134.22 90.36000000000001" geometry="thetaLength:36" scale="0.38 0.42000000000000004 1">
+                <a-animation attribute="material.opacity" begin="mouseenter" end="mouseleave" from="0" to="0.50" dur="2000" easing="linear"></a-animation>
+            </a-curvedimage>
+        </a-entity>
+        </a-entity>
+        <a-entity>
+        <a-entity data-brackets-id="930" collada-model="obj/armas/machette+fred/model.dae" position="5.378 0.975 -5.601" rotation="55 90 90" scale="1.3 1.3 1.3">
+        <a-animation    attribute="scale" begin="mouseenter" end="mouseleave" from="" to="2 2 2" from="" dur="2000" easing="linear" ></a-animation>
+            <a-curvedimage id="money" src="#money" radius="2" theta-length="36" height="0.5" position="-0.697 0.979 0.796" opacity="0" rotation="55.28 134.22 90.36000000000001" geometry="thetaLength:36" scale="0.38 0.42000000000000004 1">
+                <a-animation attribute="material.opacity" begin="mouseenter" end="mouseleave" from="0" to="0.50" dur="2000" easing="linear"></a-animation>
+            </a-curvedimage>
+        </a-entity>
+        </a-entity>
+        
+        
+        
+        <a-entity data-brackets-id="930" collada-model="obj/armas/SVK-21/model.dae" position="7.206 2.836 -5.921" rotation="0 180 0" scale="0.08 0.07 0.07"></a-entity>
+        <a-entity data-brackets-id="930" collada-model="obj/armas/SVK-21/model.dae" position="7.206 2.395 -5.921" rotation="0 180 0" scale="0.08 0.07 0.07"></a-entity>
+        <a-entity data-brackets-id="930" collada-model="obj/armas/SVK-21/model.dae" position="7.206 1.924 -5.921" rotation="0 180 0" scale="0.08 0.07 0.07"></a-entity>
+        <a-entity data-brackets-id="930" collada-model="obj/armas/SVK-21/model.dae" position="7.206 1.422 -5.921" rotation="0 180 0" scale="0.08 0.07 0.07"></a-entity>
+        <a-entity data-brackets-id="930" collada-model="obj/armas/SVK-21/model.dae" position="7.206 0.944 -5.921" rotation="0 180 0" scale="0.08 0.07 0.07"></a-entity>
+        
+        
+        
+        <a-entity data-brackets-id="392" collada-model="#jason" position="9.029 0.605 -7.142" rotation="0 280 0"></a-entity>
+    
+    
+    <a-sphere data-brackets-id="563" position="27.626 9.201 -402.437" src="Texturas/moon.jpg" scale="30 30 30" material="metalness:0.20;roughness:0.38;normalScale:1.7 1;normalTextureOffset:0.84 0;normalTextureRepeat:0.27 1;height:256.1;displacementBias:0.25;displacementTextureOffset:-0.5 0" geometry="" light="color:#ffc6c7;decay:-2.9899999999999998;intensity:1.11;penumbra:1"></a-sphere>
+        
+    <a-entity camera="userHeight:1.6;active:false" universal-controls="movementControls:checkpoint" checkpoint-controls="mode:animate" position="-1.9316971336480737 1.6 0.9992624786684177" rotation="-49.84732817638166 -403.7060624491799 0" scale="1 1 1" visible="true" velocity="0 0 0" hmd-controls="" gamepad-controls="" mouse-controls="">
+        <a-entity cursor="" position="0 0 -1" geometry="primitive:ring;radiusInner:0.02;radiusOuter:0.03" material="color:#CCC;shader:flat" rotation="0 0 0" scale="1 1 1" visible="true" raycaster="">
+        </a-entity>
+    </a-entity>
+    
+        <!-- Checkpoints -->
+      <a-entity data-brackets-id="969" position="1 0 1">
+        <a-cylinder data-brackets-id="970" checkpoint="offset:0 1.6 0" radius="1" height="0.1" position="-3.732 0 -15.454" color="#39BB82" material="color:red"></a-cylinder>
+        <a-cylinder data-brackets-id="971" checkpoint="offset:0 1.6 0" radius="1" height="0.1" position="5.18 0.703 -8.116" color="#39BB82" material="color:red"></a-cylinder>
+        <a-cylinder data-brackets-id="972" checkpoint="offset:0 1.6 0" radius="1" height="0.1" position="-3 0 0" color="#39BB82" material="color:red"></a-cylinder>
+      </a-entity>
+        
+    </a-scene>
+      
+  </body>
+</html>
